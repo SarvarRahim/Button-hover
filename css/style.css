@@ -1,0 +1,86 @@
+/* GENERAL */
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: dodgerblue;
+}
+
+.container {
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-green {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  padding: 18px 75px;
+  background-color: dodgerblue;
+  border: 2px solid #fff;
+  transition: background-color 0.5s ease;
+}
+
+.btn-green:hover {
+  background-color: #fff;
+  color: dodgerblue;
+}
+
+.btn-second {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  padding: 18px 75px;
+  background-color: dodgerblue;
+  border: 2px solid #fff;
+  transition: background-color 0.5s ease;
+  position: relative;
+  z-index: 1;
+  margin-top: 15px;
+}
+
+.btn-second::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  transform: translateY(-100%);
+  background-color: #fff;
+  position: absolute;
+  transition: transform 0.5s ease;
+  overflow: hidden;
+}
+
+
+.btn-second:hover::before {
+  height: 100%;
+  position: absolute;
+  transform: translateY(0%);
+  z-index: -1;
+}
+
+.btn-second:hover{
+  color: dodgerblue;
+  overflow: hidden;
+}
+
+
